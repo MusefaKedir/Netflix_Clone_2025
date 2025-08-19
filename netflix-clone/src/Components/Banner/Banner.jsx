@@ -7,14 +7,12 @@ const Banner = () => {
     useEffect(()=>{
 (async ()=>  {
   try{
-   const request = await axios.get(requests.fetchNetflixOrginals);
-   console.log(request)
+   const request = await axios.get(requests.fetchNetflixOriginals);
    setMovie(
      request.data.results[
        Math.floor(Math.random() * request.data.results.length)
      ]
    );
-   console.log(movie);
    
   }catch(error){
     console.log("error",error)
