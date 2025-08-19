@@ -1,14 +1,13 @@
 {
-  "homepage": "https://MusefaKedirgitPage.github.io/Netflix_Clone_2025",
   "name": "netflix-clone",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-   "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
