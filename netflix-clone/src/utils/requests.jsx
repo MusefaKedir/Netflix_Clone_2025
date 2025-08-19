@@ -1,4 +1,5 @@
-const API_KEY = process.env.REACT_APP_API_KEY;
+// const apiKey = import.meta.env.VITE_API_KEY;
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const requests = {
   fetchTranding: `/tranding/all/week?api_key=${API_KEY}&language=en-US`,
   fetchNetflixOrginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
