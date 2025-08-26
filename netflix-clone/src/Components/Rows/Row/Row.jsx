@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./row.css";
 import axios from "../../../utils/axios";
 import YouTube from "react-youtube";
-import abebe from "movie-trailer";
+import movieTrailer from "movie-trailer";
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
@@ -26,20 +26,19 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     },
   };
 
- const handleClick = (movie) => {
-   if (trailerUrl) {
-     setTrailerUrl(""); // close trailer if open
-   } else {
-     movieTrailer(movie?.title || movie?.name || movie?.original_name)
-       .then((url) => {
-         if (!url) return; // no trailer found
-         const urlParams = new URLSearchParams(new URL(url).search);
-         setTrailerUrl(urlParams.get("v"));
-       })
-       .catch((error) => console.log("Trailer not found:", error));
-   }
- };
-
+  const handleClick = (movie) => {
+    if (trailerUrl) {
+      setTrailerUrl(""); // close trailer if open
+    } else {
+      movieTrailer(movie?.title || movie?.name || movie?.original_name)
+        .then((url) => {
+          if (!url) return; // no trailer found
+          const urlParams = new URLSearchParams(new URL(url).search);
+          setTrailerUrl(urlParams.get("v"));
+        })
+        .catch((error) => console.log("Trailer not found:", error));
+    }
+  };
 
   return (
     <div className="row">

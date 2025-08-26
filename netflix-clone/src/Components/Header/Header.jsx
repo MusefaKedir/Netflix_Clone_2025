@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./header.css"
-import Netflixlogo from "../../assets/images/How-to-Change-Language-on-Netflix-on-an-Android-Device.jpg"
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
@@ -31,7 +30,11 @@ const Header = () => {
         <div className="header_left">
           <ul>
             <li>
-              <img src={Netflixlogo} alt="Netflix Logo" width="100" />
+              <img
+                src="https://pngimg.com/uploads/netflix/small/netflix_PNG12.png"
+                alt="Netflix Logo"
+                width="100"
+              />
             </li>
             <li>Home</li>
             <li>TVshows</li>
@@ -49,8 +52,12 @@ const Header = () => {
             <li>
               <NotificationsNoneIcon />
             </li>
-            <li><AccountBoxIcon/></li>
-            <li><ArrowDropDownIcon/></li>
+            <li>
+              <AccountBoxIcon />
+            </li>
+            <li>
+              <ArrowDropDownIcon />
+            </li>
           </ul>
         </div>
       </div>
