@@ -28,3 +28,9 @@ margin-right: 10px;
     color: white;
     background-color: black;
 }
+ @media screen and (max-width:768px){
+    .row__posters{
+        display: flex;
+        flex-direction: column;
+    }
+ }

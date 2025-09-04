@@ -39,3 +39,9 @@ list-style: none;
 cursor: pointer;
 /* background-color: lightgreen; */
 }
+@media screen and (max-width:600px){
+   .header_container .header_left ul li:not(:first-child){
+     display: none;
+   } 
+   
+}
